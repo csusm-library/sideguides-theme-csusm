@@ -79,14 +79,15 @@
       </div>
       <?php
         echo $this->Html->link(
-          $this->Html->image('gots-banner.jpg', array('alt' => 'Guide on the Side', 'id' => 'QuickHelp')),
+          //$this->Html->image('gots-banner.jpg', array('alt' => 'Guide on the Side', 'id' => 'QuickHelp')),
+          Configure::read('user_config.application_title'),
           array('controller' => 'tutorials', 'action' => 'index'),
           array('escape' => false)
         );
 			  echo $this->Session->flash();
 			  echo $content_for_layout;
       ?>
-
+[beta]
     </div>
   </div>
 

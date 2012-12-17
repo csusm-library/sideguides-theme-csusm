@@ -29,10 +29,9 @@
 	<?php
     echo $this->Html->charset('UTF-8');
 		//echo $this->Html->meta('icon');
-    //netdna.bootstrapcdn.com/bootswatch/2.1.1/cosmo/bootstrap.min.css
     echo $this->Html->css('https://netdna.bootstrapcdn.com/bootswatch/2.1.1/cosmo/bootstrap.no-icons.min.css');
     echo $this->Html->css('https://netdna.bootstrapcdn.com/fos/font-awesome.css');
-    echo $this->Html->css('https://fonts.googleapis.com/css?family=PT+Sans|Crimson+Text|Droid+Sans:regular,bold');
+    echo $this->Html->css('http://fonts.googleapis.com/css?family=PT+Sans|Crimson+Text|Droid+Sans:regular,bold');
 
     echo $this->element('jquery_ui_css');
 
@@ -41,9 +40,8 @@
     echo $this->element('autoinclude_css');
 
     echo $this->element('jquery');
-    echo $this->element('formalize_css');
     // jQuery Tools must be loaded first.
-    echo $this->Html->script('https://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js');
+    echo $this->Html->script('http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js');
     echo $this->element('jquery_ui');
     echo $this->Html->script('ui_tools_conflict_fix');
 
@@ -63,7 +61,6 @@
       <?php
         if ($this->Session->check('Auth.User.username')) {
           echo "You are logged in as {$this->Session->read('Auth.User.username')}. ";
-          echo '[' . $this->Html->link('Admin index', array('controller' => 'tutorials', 'action' => 'index')) . '] ';
           if ($show_password_link) {
             echo '[';
             echo $this->Html->link('Change password', array('controller' => 'users',
